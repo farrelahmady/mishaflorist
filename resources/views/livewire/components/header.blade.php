@@ -1,9 +1,9 @@
 <div>
     {{-- In work, do what you enjoy. --}}
     <header
-        class="fixed w-full flex justify-between px-5 py-6 shadow-md rounded-b z-50 top-0 bg-stone-100 lg:px-24 lg:py-10">
+        class="fixed w-full flex justify-between px-5 py-6 shadow-md rounded-b z-50 top-0 bg-stone-100 lg:px-24 lg:py-8">
         <a href="{{ route('home') }}">
-            <h1 class="text-xl font-bold  uppercase tracking-widest lg:text-3xl">Misha Florist</h1>
+            <h1 class="text-xl font-bold leading-none uppercase tracking-widest lg:text-2xl">Misha Florist</h1>
         </a>
 
         <nav class="hidden lg:flex gap-6">
