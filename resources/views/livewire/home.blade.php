@@ -74,39 +74,42 @@
 
     <section id="about" class="w-full overflow-hidden flex items-stretch  gap-8  lg:px-20 lg:py-16">
         <div id="about-content"
-            class="flex flex-col items-center justify-center gap-5 flex-1 bg-teal-500 bg-opacity-20 lg:px-52">
-            <h2 class="w-full text-left text-3xl leading-normal tracking-widest uppercase font-bold flex1 ">
+            class="flex flex-col items-center justify-center gap-5 flex-1 bg-teal-500 bg-opacity-20 p-5 md:px-28 lg:px-52 ">
+            <h2
+                class="w-full text-center text-xl leading-normal tracking-widest uppercase font-bold md:text-3xl lg:text-left">
                 {{ config('app.name') }}
             </h2>
             <div id="about-paragraph" class="flex flex-col gap-5">
-                <p class="text-base font-light">
+                <p class="text-xs font-light text-center lg:text-left md:text-base">
                     {{ config('app.name') }} bergerak dalam bidang usaha karangan bunga.<br />Tersedia berbagai karangan
                     bunga
                     diantaranya, bunga papan yang terdiri dari bunga papan wedding/pernikahan, bunga papan duka cita,
                     bunga papan ulang tahun, dll
                 </p>
-                <p class="text-base font-light">
+                <p class="text-xs font-light text-center lg:text-left md:text-base">
                     Dengan harga relative terjangkau dan pengiriman yang super cepat “same day” hari dimana paskah
                     memesan akan kami antar langsung ketempat tujuan.
                 </p>
-                <p class="text-base font-light">
+                <p class="text-xs font-light text-center lg:text-left md:text-base">
                     {{ config('app.name') }} bertempatan di Depok dan sekitarnya akan memberikan pengalaman kepada anda
                     semua
                     dalam
                     membeli karangan bunga dari berbagai kebutuhan anda.
                 </p>
-                <p class="text-base font-light">
+                <p class="text-xs font-light text-center lg:text-left md:text-base">
                     Kami juga menyedikan bunga krans, bunga meja, bunga artificial, bunga buket, bunga standing atau
                     standing flowers, serta bunga lainnya yang dapat di pesan secara online.
                 </p>
-                <p class="text-base font-light">
+                <p class="text-xs font-light text-center lg:text-left md:text-base">
                     Sampaikan pesan serta perasaan anda curahkanlah perhatian anda kepada teman kerabat, rekan atau
                     atasan anda dengan koleksi bunga dari {{ config('app.name') }} yang akan memberikan kesan tersendiri
                     terhadap
                     si penerima, dengan pengiriman super cepat sehingga mereka akan selalu mengingat anda akan perhatian
                     selama ini.
                 </p>
-                <p class="text-base font-light">{{ config('app.name') }} hadir untuk nusantara, siap untuk hampir
+                <p class="text-xs font-light text-center lg:text-left md:text-base">{{ config('app.name') }} hadir untuk
+                    nusantara,
+                    siap untuk hampir
                     seluruh
                     wilayah
                     Indonesia.
@@ -114,10 +117,12 @@
             </div>
         </div>
 
-        <div id="about-image" class="h-full w-1/3">
+        <div id="about-image" class="h-full w-1/3 hidden lg:block">
             <img src="{{ asset('images/bg-about.webp') }}" alt="" class="h-full">
         </div>
     </section>
+
+
 
     @vite('resources/js/home.js')
 </div>
