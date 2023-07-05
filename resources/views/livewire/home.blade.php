@@ -1,3 +1,7 @@
+@section('title')
+    Home
+@endsection
+
 <div class="">
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 
@@ -11,7 +15,7 @@
                         class="w-full aspect-square  flex justify-around flex-col items-center bg-hero-slide-1 bg-cover bg-center lg:h-full">
                         <div>
                             <h2 class="text-white slider-title tracking-[0.2em]">
-                                Misha Florist
+                                {{ config('app.name') }}
                             </h2>
                         </div>
                         <button
@@ -25,7 +29,7 @@
                         <div class="h-full flex justify-center flex-col items-center lg:translate-x-[2%]">
                             <div class="text-black">
                                 <h2 class="slider-title">
-                                    Misha Florist
+                                    {{ config('app.name') }}
                                 </h2>
                                 <h4 class="slider-desc">
                                     Hadir Untuk Nusantara</h4>
@@ -44,7 +48,7 @@
                             class="h-full flex justify-around flex-col items-center lg:h-fit  lg:-translate-y-1/2 lg:-translate-x-1/2">
                             <div class="text-white">
                                 <h2 class="slider-title">
-                                    Misha Florist
+                                    {{ config('app.name') }}
                                 </h2>
                                 <h4 class="slider-desc">
                                     Semua harga terjangkau</h4>
@@ -72,11 +76,12 @@
         <div id="about-content"
             class="flex flex-col items-center justify-center gap-5 flex-1 bg-teal-500 bg-opacity-20 lg:px-52">
             <h2 class="w-full text-left text-3xl leading-normal tracking-widest uppercase font-bold flex1 ">
-                Misha Florist
+                {{ config('app.name') }}
             </h2>
             <div id="about-paragraph" class="flex flex-col gap-5">
                 <p class="text-base font-light">
-                    Misha Florist bergerak dalam bidang usaha karangan bunga.<br />Tersedia berbagai karangan bunga
+                    {{ config('app.name') }} bergerak dalam bidang usaha karangan bunga.<br />Tersedia berbagai karangan
+                    bunga
                     diantaranya, bunga papan yang terdiri dari bunga papan wedding/pernikahan, bunga papan duka cita,
                     bunga papan ulang tahun, dll
                 </p>
@@ -85,7 +90,9 @@
                     memesan akan kami antar langsung ketempat tujuan.
                 </p>
                 <p class="text-base font-light">
-                    Misha Florist bertempatan di Depok dan sekitarnya akan memberikan pengalaman kepada anda semua dalam
+                    {{ config('app.name') }} bertempatan di Depok dan sekitarnya akan memberikan pengalaman kepada anda
+                    semua
+                    dalam
                     membeli karangan bunga dari berbagai kebutuhan anda.
                 </p>
                 <p class="text-base font-light">
@@ -94,11 +101,14 @@
                 </p>
                 <p class="text-base font-light">
                     Sampaikan pesan serta perasaan anda curahkanlah perhatian anda kepada teman kerabat, rekan atau
-                    atasan anda dengan koleksi bunga dari Misha Florist yang akan memberikan kesan tersendiri terhadap
+                    atasan anda dengan koleksi bunga dari {{ config('app.name') }} yang akan memberikan kesan tersendiri
+                    terhadap
                     si penerima, dengan pengiriman super cepat sehingga mereka akan selalu mengingat anda akan perhatian
                     selama ini.
                 </p>
-                <p class="text-base font-light">Misha Florist hadir untuk nusantara, siap untuk hampir seluruh wilayah
+                <p class="text-base font-light">{{ config('app.name') }} hadir untuk nusantara, siap untuk hampir
+                    seluruh
+                    wilayah
                     Indonesia.
                 </p>
             </div>
