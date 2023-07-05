@@ -7,4 +7,7 @@ var swiper = new Swiper("#hero-swiper", {
         nextEl: "#hero-swiper-next",
         prevEl: "#hero-swiper-prev",
     },
+    autoplay: {
+        delay: 3000,
+    },
 });
