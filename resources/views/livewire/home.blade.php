@@ -6,7 +6,6 @@
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 
     <!-- Swiper -->
-    <div class=""></div>
     <section id="hero" class=" h-screen w-full overflow-hidden flex items-center">
         <div id="hero-swiper" class="swiper w-full lg:h-2/3">
             <div class="swiper-wrapper ">
@@ -74,7 +73,7 @@
 
     <section id="about" class="w-full overflow-hidden flex items-stretch  gap-8  lg:px-20 lg:py-16">
         <div id="about-content"
-            class="flex flex-col items-center justify-center gap-5 flex-1 bg-teal-500 bg-opacity-20 p-5 md:px-28 lg:px-52 ">
+            class="flex flex-col items-center justify-center gap-5 flex-1 bg-teal-500 bg-opacity-20 p-5 md:px-28 xl:px-52 ">
             <h2
                 class="w-full text-center text-xl leading-normal tracking-widest uppercase font-bold md:text-3xl lg:text-left">
                 {{ config('app.name') }}
@@ -117,12 +116,28 @@
             </div>
         </div>
 
-        <div id="about-image" class="h-full w-1/3 hidden lg:block">
-            <img src="{{ asset('images/bg-about.webp') }}" alt="" class="h-full">
+        <div id="about-image" class="w-1/3 hidden lg:block ">
+            <img src="{{ asset('images/bg-about.webp') }}" alt="" class="h-full object-cover">
         </div>
     </section>
 
+    <section id="collection"
+        class="w-full overflow-hidden flex flex-col items-center gap-8 p-4 md:px-8 md:py-12 lg:px-20 lg:py-16">
+        <h2 class="w-full text-center text-xl leading-normal tracking-widest uppercase font-bold md:text-3xl">
+            My Collection
+        </h2>
 
+        <div id="collection-swiper" class="swiper w-full">
+            <div class="swiper-wrapper">
+                @for ($i = 0; $i < 10; $i++)
+                    <div class="swiper-slide">
+                        @livewire('product.card')
+                    </div>
+                @endfor
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
 
     @vite('resources/js/home.js')
 </div>

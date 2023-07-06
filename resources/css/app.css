@@ -65,3 +65,7 @@
 #hamburger-toggle:checked ~ ul .nav-list {
     @apply opacity-100;
 }
+
+#collection-swiper .swiper-slide {
+    @apply w-fit pb-6;
+}
