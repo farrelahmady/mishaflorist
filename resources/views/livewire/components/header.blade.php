@@ -1,14 +1,15 @@
 <div>
     {{-- In work, do what you enjoy. --}}
-    <header
-        class="fixed w-full flex justify-between px-5 py-6 shadow-md rounded-b z-50 top-0 bg-stone-100 lg:px-24 lg:py-8">
+    <header id="header"
+        class="fixed w-full flex justify-between px-5 py-6 z-50 top-0 -translate-y-full lg:px-24 lg:py-5 transition-all">
         <a href="{{ route('home') }}">
             <h1 class="text-xl font-bold leading-none uppercase tracking-widest lg:text-2xl">{{ config('app.name') }}
             </h1>
         </a>
 
-        <nav class="hidden lg:flex gap-6">
+        <nav class="hidden lg:flex items-center gap-6">
             @livewire('components.nav-link', ['href' => route('home'), 'active' => request()->routeIs('home'), 'text' => 'home'], key('home'))
+            @livewire('components.nav-link', ['href' => route('home'), 'active' => request()->routeIs('home'), 'text' => 'katalog'], key('katalog'))
         </nav>
 
         <nav class="flex justify-center lg:hidden">
@@ -27,13 +28,12 @@
                     @livewire('components.nav-link', ['href' => route('home'), 'active' => request()->routeIs('home'), 'text' => 'home'], key('home'))
                 </li>
                 <li class="nav-list">
-                    @livewire('components.nav-link', ['href' => route('home'), 'active' => request()->routeIs('home'), 'text' => 'home'], key('home'))
-                </li>
-                <li class="nav-list">
-                    @livewire('components.nav-link', ['href' => route('home'), 'active' => request()->routeIs('home'), 'text' => 'home'], key('home'))
+                    @livewire('components.nav-link', ['href' => route('home'), 'active' => request()->routeIs('home'), 'text' => 'katalog'], key('katalog'))
                 </li>
 
             </ul>
         </nav>
     </header>
+
+    @vite('resources/js/header.js')
 </div>

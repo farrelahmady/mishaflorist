@@ -39,7 +39,13 @@
     }
 
     .swiper-nav {
-        @apply absolute z-10 flex justify-center items-center w-6 aspect-square rounded bg-black text-white text-xxs top-1/2 -translate-y-1/2 leading-none hover:opacity-70 md:w-12 md:text-lg;
+        @apply absolute z-10 flex justify-center items-center w-6 aspect-square rounded bg-stone-900 text-white text-xxs top-1/2 -translate-y-1/2 leading-none hover:bg-stone-800 md:w-12 md:text-lg;
+    }
+}
+
+@layer utilities {
+    .header-scroll {
+        @apply translate-y-0 bg-stone-100 shadow-md;
     }
 }
 

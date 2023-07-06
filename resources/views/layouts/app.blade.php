@@ -13,11 +13,10 @@
 </head>
 
 <body>
-    @livewire('components.header')
 
-    {{ $slot }}
+    @yield('content')
+
     @livewireScripts
-
 </body>
 
 </html>

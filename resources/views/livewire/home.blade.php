@@ -6,8 +6,8 @@
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 
     <!-- Swiper -->
-    <section id="hero" class=" h-screen w-full overflow-hidden flex items-center">
-        <div id="hero-swiper" class="swiper w-full lg:h-2/3">
+    <section id="hero" class=" w-full overflow-hidden flex items-center">
+        <div id="hero-swiper" class="swiper w-full lg:h-screen group">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide ">
                     <div
@@ -60,10 +60,12 @@
                     </div>
                 </div>
             </div>
-            <div id="hero-swiper-next" class="swiper-nav right-0 mr-4 md:mr-8 ">
+            <div id="hero-swiper-next"
+                class="swiper-nav right-0 mr-4 md:mr-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
-            <div id="hero-swiper-prev" class="swiper-nav left-0 ml-4 md:ml-8 ">
+            <div id="hero-swiper-prev"
+                class="swiper-nav left-0 ml-4 md:ml-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <i class="fa-solid fa-chevron-left"></i>
             </div>
 
@@ -139,7 +141,6 @@
         </div>
     </section>
 
-    @livewire('components.footer')
 
     @vite('resources/js/home.js')
 </div>
