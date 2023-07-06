@@ -139,5 +139,7 @@
         </div>
     </section>
 
+    @livewire('components.footer')
+
     @vite('resources/js/home.js')
 </div>
