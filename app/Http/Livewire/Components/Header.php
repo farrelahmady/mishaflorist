@@ -6,8 +6,12 @@ use Livewire\Component;
 
 class Header extends Component
 {
+    public bool $visibleOnScroll = false;
+
     public function render()
     {
-        return view('livewire.components.header');
+        return view('livewire.components.header', [
+            'visibleOnScroll' => $this->visibleOnScroll,
+        ]);
     }
 }

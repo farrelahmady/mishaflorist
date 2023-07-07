@@ -49,10 +49,6 @@
     }
 }
 
-#hamburger-toggle {
-    @apply hidden;
-}
-
 #hamburger-toggle:checked ~ #hamburger #bar {
     @apply bg-transparent rotate-180  after:translate-y-[-90%] after:rotate-[-45deg]  before:translate-y-[10%] before:rotate-[45deg];
 }
@@ -74,4 +70,16 @@
 
 #collection-swiper .swiper-slide {
     @apply w-fit pb-6;
+}
+
+#filter-toggle:checked ~ #screen {
+    @apply visible;
+}
+
+.nav-list {
+    @apply opacity-0 w-full bg-stone-500 p-1 transition-all duration-300 ease-in-out hover:bg-stone-600;
+}
+
+#filter-toggle:checked ~ #filter-box {
+    @apply visible translate-y-0 transition-all;
 }

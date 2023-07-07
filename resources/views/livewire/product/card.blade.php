@@ -1,4 +1,5 @@
-    <div class="relative flex w-40 md:w-60 flex-col overflow-hidden rounded-sm border border-gray-100  shadow-md">
+    <div
+        class="relative flex w-40 md:w-48 lg:w-60 flex-col overflow-hidden rounded-sm border border-gray-100  shadow-md">
         {{-- <div class="relative flex w-full max-w-xs flex-col overflow-hidden rounded-sm border border-gray-100  shadow-md"> --}}
         <a class="relative w-full flex h-32 md:h-60 overflow-hidden " href="#">
             <img class="object-cover w-full" src="{{ asset('images/bg-main.webp') }}" alt="product image" />
@@ -8,10 +9,11 @@
         </a>
         <div class="p-3">
             <a href="#">
-                <h5 class="text-base md:text-xl tracking-tight text-stone-900">Nike Air MX Super 2500 - Red</h5>
+                <h5 class="text-base  lg:text-xl tracking-tight text-stone-900">Nike Air MX Super 2500 - Red
+                </h5>
             </a>
             <div class="mt-2 mb-5 flex items-center justify-between">
-                <p class="flex flex-col md:block">
+                <p class="flex flex-col lg:block">
                     <span class="text-lg md:text-xl font-bold text-stone-900">Rp
                         {{ number_format('1000000', 0, ',', '.') }}</span>
                     <span class="text-xs text-stone-900 line-through">Rp

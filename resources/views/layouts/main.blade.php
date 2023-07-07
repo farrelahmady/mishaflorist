@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
-@section('content')
-    @livewire('components.header')
+@section('title')
+    {{ $title }}
+@endsection
 
-    {{ $slot }}
+@section('content')
+    @livewire('components.header', ['visibleOnScroll' => $headerVisibleOnScroll ?? false])
+
+    <div class="min-h-screen">
+        {{ $slot }}
+
+    </div>
 
     @livewire('components.footer')
 @endsection

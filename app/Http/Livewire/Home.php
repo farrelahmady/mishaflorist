@@ -8,6 +8,6 @@ class Home extends Component
 {
     public function render()
     {
-        return view('livewire.home')->layout('layouts.main');
+        return view('livewire.home')->layout('layouts.main', ['title' => 'Home', 'headerVisibleOnScroll' => true]);
     }
 }
