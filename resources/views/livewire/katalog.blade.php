@@ -86,7 +86,7 @@
                     class="grid grid-cols-2 gap-2 md:gap-5 justify-items-center sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full">
                     {{-- <div class="flex flex-wrap w-fit justify-start gap-2 lg:gap-4"> --}}
                     @foreach ($products as $product)
-                        @livewire('product.card', ['product' => $product], $product->id)
+                        @livewire('product.card', ['product' => $product], key($product->id))
                     @endforeach
                 </div>
             @endif
