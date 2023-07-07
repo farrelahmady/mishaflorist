@@ -15,8 +15,9 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('slug');
-            $table->bigInteger('price')->default(0);
-            $table->integer('quantity')->default(0);
+            $table->unsignedBigInteger('price')->default(0);
+            $table->unsignedInteger('discount')->default(0);
+            $table->unsignedInteger('quantity')->default(0);
             $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();

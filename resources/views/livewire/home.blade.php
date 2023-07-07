@@ -11,7 +11,7 @@
                         </h2>
                     </div>
                     <button
-                        class="px-8 py-3 rounded-sm uppercase font-thin border-white text-white border mt-8  hover:bg-white border-transparent hover:text-black transition-colors ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
+                        class="px-8 py-3 rounded-sm uppercase font-thin font-playfair tracking-widest border-white text-white border mt-8  hover:bg-white border-transparent hover:text-black transition-colors ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
                         Now</button>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                                 Hadir Untuk Nusantara</h4>
                         </div>
                         <button
-                            class="px-8 py-3 rounded-sm uppercase font-thin bg-stone-800  text-white border mt-8  hover:opacity-75 transition-opacity ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
+                            class="px-8 py-3 rounded-sm uppercase font-thin font-playfair tracking-widest bg-stone-800  text-white border mt-8  hover:opacity-75 transition-opacity ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
                             Now</button>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         </div>
 
                         <button
-                            class="px-8 py-3 rounded-sm uppercase font-thin border-white text-white border mt-8  hover:bg-white border-transparent hover:text-black transition-colors ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
+                            class="px-8 py-3 rounded-sm uppercase font-thin font-playfair tracking-widest border-white text-white border mt-8  hover:bg-white border-transparent hover:text-black transition-colors ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
                             Now</button>
                     </div>
                 </div>
