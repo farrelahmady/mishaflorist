@@ -34,8 +34,16 @@ class ProductSeeder extends Seeder
                 $productFactory = Product::factory()->make([
                     "name" => str_replace(["-", ".jpg"], [" ", ""], $image),
                 ]);
+
                 $product = $category->products()->createMany([
-                    $productFactory->toArray()
+                    [
+                        "name" => $productFactory->name,
+                        "price" => $productFactory->price,
+                        "quantity" => $productFactory->quantity,
+                        "discount" => $productFactory->discount,
+                        "description" => $productFactory->description,
+                        "is_featured" => $productFactory->is_featured,
+                    ]
                 ]);
 
                 $product = $product[0];

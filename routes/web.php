@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Admin\Login;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Katalog;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('home');
 Route::get('/katalog', Katalog::class)->name('katalog');
+
+Route::prefix('admin')->group(function () {
+    Route::get('login', Login::class)->name('login');
+});

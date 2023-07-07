@@ -41,6 +41,10 @@
     .swiper-nav {
         @apply absolute z-10 flex justify-center items-center w-6 aspect-square rounded bg-stone-900 text-white text-xxs top-1/2 -translate-y-1/2 leading-none hover:bg-stone-800 md:w-12 md:text-lg;
     }
+
+    .error-input {
+        @apply text-red-500 text-xs;
+    }
 }
 
 @layer utilities {
