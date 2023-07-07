@@ -124,11 +124,11 @@
 
     <div id="collection-swiper" class="swiper w-full">
         <div class="swiper-wrapper">
-            @for ($i = 0; $i < 10; $i++)
+            @foreach ($featuredProducts as $product)
                 <div class="swiper-slide">
-                    @livewire('product.card')
+                    @livewire('product.card', ['product' => $product], key($product->id))
                 </div>
-            @endfor
+            @endforeach
         </div>
         <div class="swiper-scrollbar"></div>
     </div>

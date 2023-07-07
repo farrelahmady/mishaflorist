@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_pictures', function (Blueprint $table) {
-            $table->uuid('id')->primary();;
+            $table->uuid('id')->primary();
             $table->foreignUuid('product_id')->constrained()->onDelete('cascade');
             $table->string('path');
             $table->timestamps();

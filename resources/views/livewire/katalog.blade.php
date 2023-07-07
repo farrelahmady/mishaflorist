@@ -84,9 +84,9 @@
             <div
                 class="grid grid-cols-2 gap-2 md:gap-5 justify-items-center sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {{-- <div class="flex flex-wrap w-fit justify-start gap-2 lg:gap-4"> --}}
-                @for ($i = 0; $i < 50; $i++)
-                    @livewire('product.card')
-                @endfor
+                @foreach ($products as $product)
+                    @livewire('product.card', ['product' => $product], key($product->id))
+                @endforeach
             </div>
         </div>
 

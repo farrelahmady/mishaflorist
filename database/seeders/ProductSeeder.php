@@ -44,19 +44,19 @@ class ProductSeeder extends Seeder
 
                 $compressedImage = Image::make($temp);
 
-                $path = storage_path('app\public\product');
+                $path = storage_path('app/public/product');
                 if (!file_exists($path)) {
                     mkdir($path, 0777, true);
                 }
 
                 $fileName = explode(".", $image)[0];
-                $filePath = $path . "\\" . $fileName . ".webp";
+                $filePath = $path . "/" . $fileName . ".webp";
 
                 $compressedImage->save($filePath, 50);
 
                 info("Uploaded new image:" . $filePath);
 
-                $filePath = str_replace(storage_path('app\public'), "storage", $filePath);
+                $filePath = str_replace(storage_path('app/public'), "storage", $filePath);
 
                 $product->pictures()->create([
                     "path" => $filePath,
