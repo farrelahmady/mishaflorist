@@ -16,6 +16,7 @@
 
 <body>
 
+
     @yield('content')
 
     @livewireScripts

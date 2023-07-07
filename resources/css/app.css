@@ -42,6 +42,10 @@
         @apply absolute z-10 flex justify-center items-center w-6 aspect-square rounded bg-stone-900 text-white text-xxs top-1/2 -translate-y-1/2 leading-none hover:bg-stone-800 md:w-12 md:text-lg;
     }
 
+    .nav-list {
+        @apply w-full transition-all duration-300 ease-in-out;
+    }
+
     .error-input {
         @apply text-red-500 text-xs;
     }
@@ -53,35 +57,12 @@
     }
 }
 
-#hamburger-toggle:checked ~ #hamburger #bar {
-    @apply bg-transparent rotate-180  after:translate-y-[-90%] after:rotate-[-45deg]  before:translate-y-[10%] before:rotate-[45deg];
-}
-
-#hamburger-toggle:checked ~ #screen {
-    @apply block;
-}
-
-.nav-list {
-    @apply opacity-0 w-full bg-stone-500 p-1 transition-all duration-300 ease-in-out hover:bg-stone-600;
-}
-
-#hamburger-toggle:checked ~ ul {
-    @apply visible flex translate-x-0;
-}
-#hamburger-toggle:checked ~ ul .nav-list {
-    @apply opacity-100;
-}
-
 #collection-swiper .swiper-slide {
     @apply w-fit pb-6;
 }
 
 #filter-toggle:checked ~ #screen {
     @apply visible;
-}
-
-.nav-list {
-    @apply opacity-0 w-full bg-stone-500 p-1 transition-all duration-300 ease-in-out hover:bg-stone-600;
 }
 
 #filter-toggle:checked ~ #filter-box {

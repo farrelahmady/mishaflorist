@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0633b890e83aefcd019644770932036",
+    "content-hash": "9c60dc0cae5a979bf7b2d3d1e1bb9699",
     "packages": [
         {
             "name": "brick/math",
@@ -5539,6 +5539,64 @@
                 }
             ],
             "time": "2023-06-21T12:08:28+00:00"
+        },
+        {
+            "name": "tanthammar/livewire-window-size",
+            "version": "2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TinaHammar/livewire-window-size.git",
+                "reference": "1f2fbeeb66df22df979e0f21878e0cb075f8afb9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TinaHammar/livewire-window-size/zipball/1f2fbeeb66df22df979e0f21878e0cb075f8afb9",
+                "reference": "1f2fbeeb66df22df979e0f21878e0cb075f8afb9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "livewire/livewire": "^2.4.4",
+                "php": "^8.0|^8.1|^8.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tanthammar\\LivewireWindowSize\\LivewireWindowSizeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tanthammar\\LivewireWindowSize\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tina Hammar",
+                    "email": "tinahammar@gmail.com"
+                }
+            ],
+            "description": "Laravel blade directives and php helpers for serverside rendered content, based on browser window size WITHOUT css. Requires Livewire and AlpineJS",
+            "keywords": [
+                "alpine",
+                "breakpoints",
+                "laravel",
+                "livewire"
+            ],
+            "support": {
+                "issues": "https://github.com/TinaHammar/livewire-window-size/issues",
+                "source": "https://github.com/TinaHammar/livewire-window-size/tree/2.1"
+            },
+            "time": "2023-02-23T11:12:20+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Livewire\Admin\Login;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Katalog;
+use App\Http\Livewire\Admin\Login;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Home::class)->name('home');
+Route::get('/home', Home::class)->name('home');
 Route::get('/katalog', Katalog::class)->name('katalog');
 
 Route::prefix('admin')->group(function () {
-    Route::get('login', Login::class)->name('login');
+    Route::middleware('guest')->group(function () {
+        Route::get('login', Login::class)->name('login');
+    });
+
+    Route::middleware('auth')->group(function () {
+        Route::get('dashboard', Dashboard::class)->name('admin.dashboard');
+        Route::get('/', Dashboard::class);
+    });
 });

@@ -3,11 +3,11 @@
 namespace App\Http\Livewire\Components;
 
 use Livewire\Component;
+use Tanthammar\LivewireWindowSize\HasBreakpoints;
 
-class Header extends Component
+class AdminSidebar extends Component
 {
-    public bool $visibleOnScroll = false;
-    public bool $showSidebar = true;
+    public bool $showSidebar = false;
 
     public function toggleSidebar()
     {
@@ -16,6 +16,6 @@ class Header extends Component
 
     public function render()
     {
-        return view('livewire.components.header');
+        return view('livewire.components.admin-sidebar');
     }
 }

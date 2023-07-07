@@ -39,6 +39,6 @@ class Login extends Component
 
     public function render()
     {
-        return view('livewire.admin.login')->layout('layouts.main', ['title' => 'Home', 'headerVisibleOnScroll' => true]);
+        return view('livewire.admin.login')->layout('layouts.auth', ['title' => 'Login']);
     }
 }
