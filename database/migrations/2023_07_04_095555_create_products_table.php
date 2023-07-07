@@ -15,10 +15,12 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('slug');
+            $table->unsignedBigInteger('product_category_id')->nullable()->index();
             $table->unsignedBigInteger('price')->default(0);
             $table->unsignedInteger('discount')->default(0);
             $table->unsignedInteger('quantity')->default(0);
             $table->text('description')->nullable();
+            $table->boolean('is_featured')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
