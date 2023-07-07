@@ -10,9 +10,9 @@
                             {{ config('app.name') }}
                         </h2>
                     </div>
-                    <button
+                    <a href="{{ route('katalog') }}"
                         class="px-8 py-3 rounded-sm uppercase font-thin font-playfair tracking-widest border-white text-white border mt-8  hover:bg-white border-transparent hover:text-black transition-colors ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
-                        Now</button>
+                        Now</a>
                 </div>
             </div>
             <div class="swiper-slide ">
@@ -26,9 +26,9 @@
                             <h4 class="slider-desc">
                                 Hadir Untuk Nusantara</h4>
                         </div>
-                        <button
+                        <a href="{{ route('katalog') }}"
                             class="px-8 py-3 rounded-sm uppercase font-thin font-playfair tracking-widest bg-stone-800  text-white border mt-8  hover:opacity-75 transition-opacity ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
-                            Now</button>
+                            Now</a>
                     </div>
                 </div>
             </div>
@@ -46,9 +46,9 @@
                                 Semua harga terjangkau</h4>
                         </div>
 
-                        <button
+                        <a href="{{ route('katalog') }}"
                             class="px-8 py-3 rounded-sm uppercase font-thin font-playfair tracking-widest border-white text-white border mt-8  hover:bg-white border-transparent hover:text-black transition-colors ease-in-out duration-500 md:text-2xl md:px-12 md:py-4 lg:text-xl">Shop
-                            Now</button>
+                            Now</a>
                     </div>
                 </div>
             </div>
@@ -116,23 +116,26 @@
     </div>
 </section>
 
-<section id="collection"
-    class="w-full overflow-hidden flex flex-col items-center gap-8 p-4 md:px-8 md:py-12 lg:px-20 lg:py-16">
-    <h2 class="w-full text-center text-xl leading-normal tracking-widest uppercase font-bold md:text-3xl">
-        My Collection
-    </h2>
+@if ($featuredProducts->count() > 0)
+    <section id="collection"
+        class="w-full overflow-hidden flex flex-col items-center gap-8 p-4 md:px-8 md:py-12 lg:px-20 lg:py-16">
+        <h2 class="w-full text-center text-xl leading-normal tracking-widest uppercase font-bold md:text-3xl">
+            My Collection
+        </h2>
 
-    <div id="collection-swiper" class="swiper w-full">
-        <div class="swiper-wrapper">
-            @foreach ($featuredProducts as $product)
-                <div class="swiper-slide">
-                    @livewire('product.card', ['product' => $product], key($product->id))
-                </div>
-            @endforeach
+        <div id="collection-swiper" class="swiper w-full">
+            <div class="swiper-wrapper">
+                @foreach ($featuredProducts as $product)
+                    <div class="swiper-slide">
+                        @livewire('product.card', ['product' => $product], key($product->id))
+                    </div>
+                @endforeach
+            </div>
+            <div class="swiper-scrollbar"></div>
         </div>
-        <div class="swiper-scrollbar"></div>
-    </div>
-</section>
+    </section>
+
+@endif
 
 
 @vite('resources/js/home.js')

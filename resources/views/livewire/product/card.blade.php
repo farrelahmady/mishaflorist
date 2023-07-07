@@ -17,7 +17,8 @@
                 <p class="flex flex-col lg:block">
                     <span class="text-lg md:text-xl font-bold text-stone-900">Rp
                         {{ number_format($product->discounted_price, 0, ',', '.') }}</span>
-                    <span class="text-xs text-stone-900 line-through @if (!$product->discount) hidden @endif">Rp
+                    <span
+                        class="text-xs text-stone-900 line-through @if (!$product->discount) opacity-0 @endif">Rp
                         {{ number_format($product->price, 0, ',', '.') }}</span>
                 </p>
             </div>

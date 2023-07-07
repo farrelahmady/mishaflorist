@@ -49,8 +49,8 @@
                                 <h3>Urutkan Berdasarkan</h3>
                                 <div class="flex flex-wrap gap-2">
                                     <div class="flex gap-2 flex-1">
-                                        <input id="Diskon" type="radio">
-                                        <label for="Diskon" class="whitespace-nowrap">Urutan</label>
+                                        <input id="Urutan" type="radio">
+                                        <label for="Urutan" class="whitespace-nowrap">Urutan</label>
                                     </div>
                                 </div>
 
@@ -60,7 +60,7 @@
                                 <h3>Promo</h3>
                                 <div class="flex flex-wrap gap-2">
                                     <div class="flex gap-2 flex-1">
-                                        <input id="Diskon" type="checkbox">
+                                        <input id="Diskon" type="checkbox" wire:model="filter.discount">
                                         <label for="Diskon" class="whitespace-nowrap">Diskon</label>
                                     </div>
                                 </div>
