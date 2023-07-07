@@ -7,28 +7,22 @@
                 <div class="p-2">
                     <h3>Promo</h3>
                     <div class="flex gap-2">
-                        <input id="Diskon" type="checkbox">
+                        <input id="Diskon" type="checkbox" wire:model="filter.discount">
                         <label for="Diskon">Diskon</label>
                     </div>
 
                 </div>
-                <div class="p-2">
-                    <h3>Promo</h3>
-                    <div class="flex gap-2">
-                        <input id="Diskon" type="checkbox">
-                        <label for="Diskon">Diskon</label>
-                    </div>
-                </div>
 
-                <button
+                {{-- <button
                     class="w-full flex items-center justify-center rounded-sm bg-stone-800 px-3 py-2 text-center text-sm font-medium text-white hover:opacity-75 transition-opacity ease-in-out duration-500 mt-2">
-                    Terapkan</button>
+                    Terapkan</button> --}}
             </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 flex-1">
             <div class="flex gap-1 items-center md:gap-2">
                 <div class="border-2 rounded-lg bg-white flex flex-1 ">
-                    <input type="text" class="bg-transparent flex-1 p-2 outline-none" placeholder="Search...">
+                    <input type="text" wire:model="filter.search" class="bg-transparent flex-1 p-2 outline-none"
+                        placeholder="Search...">
                 </div>
 
                 <div class="border-2 rounded-lg bg-white hidden md:flex ">
@@ -73,21 +67,29 @@
                             </div>
                         </div>
 
-                        <div class="p-2">
+                        {{-- <div class="p-2">
                             <button
                                 class="w-full flex items-center justify-center rounded-sm bg-stone-800 px-3 py-2 md:px-5 md:py-3 text-center text-sm font-medium text-white hover:opacity-75 transition-opacity ease-in-out duration-500">
                                 Terapkan</button>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-2 gap-2 md:gap-5 justify-items-center sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {{-- <div class="flex flex-wrap w-fit justify-start gap-2 lg:gap-4"> --}}
-                @foreach ($products as $product)
-                    @livewire('product.card', ['product' => $product], key($product->id))
-                @endforeach
-            </div>
+
+            @if ($products->isEmpty())
+                <div class="flex flex-col items-center justify-center w-full bg-white rounded-lg h-96 shadow-sm border">
+                    <img src="{{ asset('logo.ico') }}" alt="empty" class="">
+                    <h2 class="text-2xl font-semibold">Oops, produk tidak ditemukan</h2>
+                </div>
+            @else
+                <div
+                    class="grid grid-cols-2 gap-2 md:gap-5 justify-items-center sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full">
+                    {{-- <div class="flex flex-wrap w-fit justify-start gap-2 lg:gap-4"> --}}
+                    @foreach ($products as $product)
+                        @livewire('product.card', ['product' => $product], key($product->id))
+                    @endforeach
+                </div>
+            @endif
         </div>
 
     </div>
