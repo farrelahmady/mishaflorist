@@ -49,6 +49,18 @@
     .error-input {
         @apply text-red-500 text-xs;
     }
+
+    .table {
+        @apply items-center w-full bg-transparent border-collapse;
+    }
+
+    .table-head {
+        @apply px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-stone-50 text-stone-500 border-stone-100;
+    }
+
+    .table-data {
+        @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs max-w-xs p-4;
+    }
 }
 
 @layer utilities {

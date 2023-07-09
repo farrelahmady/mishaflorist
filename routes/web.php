@@ -5,6 +5,7 @@ use App\Http\Livewire\Katalog;
 use App\Http\Livewire\Admin\Login;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Dashboard;
+use App\Http\Livewire\Admin\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,7 @@ Route::prefix('admin')->group(function () {
     Route::middleware('auth')->group(function () {
         Route::get('dashboard', Dashboard::class)->name('admin.dashboard');
         Route::get('/', Dashboard::class);
+
+        Route::get('/product', Product::class)->name('admin.products');
     });
 });

@@ -26,7 +26,8 @@
                 Admin Menu</h6>
             <ul class="md:flex-col md:min-w-full flex flex-col list-none ml-2">
                 <li class="items-center">
-                    <a href="" class="text-xs uppercase py-3 font-bold block text-teal-500 hover:text-teal-600">
+                    <a href="{{ route('admin.dashboard') }}"
+                        class="text-xs uppercase py-3 font-bold block text-teal-500 hover:text-teal-600">
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                         Dashboard</a>
                 </li>
@@ -38,7 +39,7 @@
                 Products</h6>
             <ul class="md:flex-col md:min-w-full flex flex-col list-none ml-2">
                 <li class="items-center">
-                    <a href=""
+                    <a href="{{ route('admin.products') }}"
                         class="text-xs uppercase py-3 font-bold block text-stone-700 hover:text-stone-500">
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                         Product</a>
