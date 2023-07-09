@@ -27,7 +27,7 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none ml-2">
                 <li class="items-center">
                     <a href="{{ route('admin.dashboard') }}"
-                        class="text-xs uppercase py-3 font-bold block text-teal-500 hover:text-teal-600">
+                        class="text-xs uppercase py-3 font-bold block {{ Request::is('admin/dashboard*') ? 'text-teal-500 hover:text-teal-600' : 'text-stone-700 hover:text-stone-500' }}">
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                         Dashboard</a>
                 </li>
@@ -40,7 +40,7 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none ml-2">
                 <li class="items-center">
                     <a href="{{ route('admin.products') }}"
-                        class="text-xs uppercase py-3 font-bold block text-stone-700 hover:text-stone-500">
+                        class="text-xs uppercase py-3 font-bold block {{ Request::is('admin/product*') ? 'text-teal-500 hover:text-teal-600' : 'text-stone-700 hover:text-stone-500' }}">
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                         Product</a>
                 </li>

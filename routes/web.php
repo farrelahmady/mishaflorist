@@ -29,7 +29,7 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('auth')->group(function () {
         Route::get('dashboard', Dashboard::class)->name('admin.dashboard');
-        Route::get('/', Dashboard::class);
+        Route::get('/', fn () => redirect()->route('admin.dashboard'));
 
         Route::get('/product', Product::class)->name('admin.products');
     });
