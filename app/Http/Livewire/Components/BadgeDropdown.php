@@ -25,13 +25,9 @@ class BadgeDropdown extends Component
         if ($this->onSelect) {
             $this->emitUp($this->onSelect, $this->data, $option);
         }
-    }
 
-    public function refreshParent()
-    {
-        $this->emitUp('refreshParent');
+        $this->toggle();
     }
-
 
     public function toggle()
     {

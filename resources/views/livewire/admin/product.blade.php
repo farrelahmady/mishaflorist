@@ -1,4 +1,11 @@
 <div>
+    <section>
+        <form wire:submit.prevent="addProduct">
+            <input type="text" value="{{ fake()->name }}">
+            <button type="submit">Add</button>
+        </form>
+    </section>
+
     <x-card-container>
         @slot('title')
             Product
@@ -33,7 +40,11 @@
                                 </div>
                             </td>
                             <td class="table-data capitalize">{{ $product->name }}</td>
-                            <td class="table-data capitalize">{{ $product->category->name }}</td>
+                            <td class="table-data capitalize">
+                                @if ($product->category)
+                                    {{ $product->category->name }}
+                                @endif
+                            </td>
                             <td class="table-data capitalize">Rp {{ number_format($product->price, 0, ',', '.') }}</td>
                             <td class="table-data capitalize">{{ $product->discount }}%</td>
                             <td class="table-data capitalize">Rp
@@ -43,6 +54,7 @@
                                 @php
                                     $style = $product->is_featured ? 'text-green-600 bg-green-200' : 'text-red-600 bg-red-200';
                                 @endphp
+
                                 @livewire(
                                     'components.badge-dropdown',
                                     [
@@ -64,7 +76,7 @@
                                         'data' => $product->id,
                                         'onSelect' => 'changeFeatured',
                                     ],
-                                    key($product->id)
+                                    key($product->id . now())
                                 )
                             </td>
                             <td class="table-data">
