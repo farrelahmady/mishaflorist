@@ -41,19 +41,19 @@
                 <li class="items-center">
                     <a href="{{ route('admin.products') }}"
                         class="text-xs uppercase py-3 font-bold block {{ Request::is('admin/product*') ? 'text-teal-500 hover:text-teal-600' : 'text-stone-700 hover:text-stone-500' }}">
-                        <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                        <i class="fa-solid fa-list-ul mr-2 text-sm opacity-75"></i>
                         Product</a>
                 </li>
                 <li class="items-center">
                     <a href=""
                         class="text-xs uppercase py-3 font-bold block text-stone-700 hover:text-stone-500">
-                        <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                        <i class="fa-solid fa-bookmark mr-2 text-sm opacity-75"></i>
                         Category</a>
                 </li>
                 <li class="items-center">
                     <a href=""
                         class="text-xs uppercase py-3 font-bold block text-stone-700 hover:text-stone-500">
-                        <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                        <i class="fa-solid fa-calendar-days  mr-2 text-sm opacity-75"></i>
                         Events</a>
                 </li>
             </ul>

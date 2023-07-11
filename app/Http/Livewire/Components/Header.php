@@ -7,7 +7,7 @@ use Livewire\Component;
 class Header extends Component
 {
     public bool $visibleOnScroll = false;
-    public bool $showSidebar = true;
+    public bool $showSidebar = false;
 
     public function toggleSidebar()
     {

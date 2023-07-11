@@ -10,16 +10,22 @@
     <title>@yield('title') - {{ config('app.name') }}</title>
     @vite('resources/js/app.js')
     @vite('resources/css/app.css')
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     @livewireStyles
 
 </head>
 
 <body>
+    <div id="flash-container" class="fixed z-50 flex flex-col left-4 right-4 top-4">
 
+    </div>
 
     @yield('content')
 
     @livewireScripts
+    @stack('scripts')
+
+    @vite('resources/js/flash.js')
 </body>
 
 </html>
