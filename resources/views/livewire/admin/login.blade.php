@@ -5,7 +5,7 @@
             Sign in to your account
         </h1>
         @error('credentials')
-            <span class="error-input">{{ $message }}</span>
+            <span class="invalid-message">{{ $message }}</span>
         @enderror
         <form wire:submit.prevent="login" class="space-y-4 md:space-y-6">
             <div>
@@ -15,7 +15,7 @@
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-stone-600 focus:border-stone-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com" required="">
                 @error('email')
-                    <span class="error-input">{{ $message }}</span>
+                    <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
             <div>
@@ -26,7 +26,7 @@
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-stone-600 focus:border-stone-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required="">
                 @error('password')
-                    <span class="error-input">{{ $message }}</span>
+                    <span class="invalid-message">{{ $message }}</span>
                 @enderror
             </div>
             <div class="flex items-center justify-end">

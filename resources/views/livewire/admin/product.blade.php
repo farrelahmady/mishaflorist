@@ -1,10 +1,5 @@
 <div>
-    <section>
-        <form wire:submit.prevent="addProduct">
-            <input type="text" value="{{ fake()->name }}">
-            <button type="submit">Add</button>
-        </form>
-    </section>
+    @livewire('product.create')
 
     <x-card-container>
         @slot('title')
