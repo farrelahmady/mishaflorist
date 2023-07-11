@@ -37,13 +37,14 @@ class Product extends Component
             'is_featured' => $req
         ]);
 
-        session()->flash('message', 'Post Updated Successfully.');
+        $message = $req ? 'Featured' : 'Unfeatured';
+        $product = $product->name;
+
+        $this->dispatchBrowserEvent('alert', ['type' => 'success', 'message' => "Successfully Set <strong>'$product'</strong> as <strong>$message Product.</strong>"]);
     }
 
     public function addProduct()
     {
-        ProductModel::factory()->create();
-
-        session()->flash('message', 'Post Created Successfully.');
+        $this->dispatchBrowserEvent('alert', ['type' => 'success', 'message' => 'Post Created Successfully.']);
     }
 }
