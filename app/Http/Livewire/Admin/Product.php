@@ -11,12 +11,14 @@ class Product extends Component
     use WithPagination;
 
     public $search;
+    public $showCreate = true;
 
     protected $paginationTheme = 'tailwind';
 
     protected $listeners = [
         'changeFeatured' => 'changeFeatured',
-        'refreshParent' => '$refresh'
+        'delete' => 'deleteProduct',
+        'refreshProduct' => '$refresh',
     ];
 
     public function render()
@@ -34,7 +36,7 @@ class Product extends Component
     {
         $product = ProductModel::find($product);
         $product->update([
-            'is_featured' => $req
+            'featured' => $req
         ]);
 
         $message = $req ? 'Featured' : 'Unfeatured';
@@ -43,8 +45,13 @@ class Product extends Component
         $this->dispatchBrowserEvent('alert', ['type' => 'success', 'message' => "Successfully Set <strong>'$product'</strong> as <strong>$message Product.</strong>"]);
     }
 
-    public function addProduct()
+    public function deleteProduct($id)
     {
-        $this->dispatchBrowserEvent('alert', ['type' => 'success', 'message' => 'Post Created Successfully.']);
+        $product = ProductModel::find($id);
+        $product->delete();
+
+        $this->dispatchBrowserEvent('alert', ['type' => 'success', 'message' => "Successfully Delete <strong>'$product->name'</strong>"]);
+
+        $this->emit('refreshProduct');
     }
 }

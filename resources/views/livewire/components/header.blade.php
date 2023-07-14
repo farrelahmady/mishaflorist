@@ -1,6 +1,6 @@
 <div>
     <header id="header"
-        class="fixed w-full flex justify-between px-5 py-6 z-50 top-0 {{ $visibleOnScroll ? '-translate-y-full' : '' }} lg:px-24 lg:py-5 transition-all {{ $showSidebar ? 'header-scroll' : 'header-scroll' }}">
+        class="fixed w-full flex justify-between px-5 py-6 z-30 top-0 {{ $visibleOnScroll ? '-translate-y-full' : '' }} lg:px-24 lg:py-5 transition-all {{ $showSidebar ? 'header-scroll' : 'header-scroll' }}">
         <a href="{{ route('home') }}">
             <h1 class="text-xl font-bold leading-none uppercase tracking-widest lg:text-2xl">{{ config('app.name') }}
             </h1>

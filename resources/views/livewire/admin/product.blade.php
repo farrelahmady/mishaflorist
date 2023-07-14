@@ -1,9 +1,12 @@
 <div>
-    @livewire('product.create')
 
     <x-card-container>
         @slot('title')
             Product
+        @endslot
+
+        @slot('additionHeader')
+            @livewire('product.create', [], key('create' . now()))
         @endslot
 
         <div class="w-full overflow-y-hidden overflow-x-auto">
@@ -26,7 +29,7 @@
                 <tbody>
                     @foreach ($products as $product)
                         <tr>
-                            <td class="table-data">
+                            <td class="table-data max-w-fit">
                                 <div class="flex flex-wrap gap-1 items-center">
                                     @foreach ($product->pictures as $picture)
                                         <img class="aspect-video h-8 object-cover inline-block"
@@ -47,7 +50,7 @@
                             <td class="table-data capitalize">{{ $product->quantity }}</td>
                             <td class="table-data capitalize">
                                 @php
-                                    $style = $product->is_featured ? 'text-green-600 bg-green-200' : 'text-red-600 bg-red-200';
+                                    $style = $product->featured ? 'text-green-600 bg-green-200' : 'text-red-600 bg-red-200';
                                 @endphp
 
                                 @livewire(
@@ -67,7 +70,7 @@
                                                 'style' => 'text-green-600 bg-green-200',
                                             ],
                                         ],
-                                        'selected' => $product->is_featured,
+                                        'selected' => $product->featured,
                                         'data' => $product->id,
                                         'onSelect' => 'changeFeatured',
                                     ],
@@ -78,14 +81,12 @@
                                 {{ $product->description }}
                             </td>
                             <td class="table-data ">
-                                <div class="flex  items-center">
-                                    <span
-                                        class="flex justify-between items-center text-xs font-semibold py-1 px-2 rounded uppercase last:mr-0 mr-1 w-fit text-stone-100 cursor-pointer bg-blue-400 hover:bg-blue-500">
+                                <div class="flex  items-center gap-1">
+                                    <span class="badge clickable badge-info">
                                         Edit
                                     </span>
-                                    <span wire:click="delete({{ $product->id }})"
-                                        class="flex justify-between items-center text-xs font-semibold py-1 px-2 rounded uppercase last:mr-0 mr-1 w-fit text-stone-100 cursor-pointer bg-red-400 hover:bg-red-500">Delete</span>
-
+                                    <span wire:click="deleteProduct('{{ $product->id }}')"
+                                        class="badge clickable badge-danger">Delete</span>
                                 </div>
                             </td>
                         </tr>

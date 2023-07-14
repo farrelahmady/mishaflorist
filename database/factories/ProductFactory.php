@@ -22,7 +22,7 @@ class ProductFactory extends Factory
             'quantity' => $this->faker->numberBetween(0, 10),
             'discount' => $this->faker->randomElement([0, 10, 20, 30]),
             'description' => $this->faker->text,
-            'is_featured' => $this->faker->boolean,
+            'featured' => $this->faker->boolean,
         ];
     }
 }

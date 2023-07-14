@@ -1,6 +1,6 @@
 <div class="relative {{ $width ?? 'w-28' }}">
     <span wire:click="toggle "
-        class="flex justify-between items-center text-xs font-semibold py-1 px-2 rounded {{ $options[$selected]['style'] ?? 'bg-white border' }} uppercase last:mr-0 mr-1 w-full cursor-pointer livewire-dropdown relative {{ $show ? 'z-20' : '' }}">
+        class="flex justify-between items-center text-xs font-semibold py-1 px-2 rounded {{ $options[$selected]['style'] ?? 'bg-white border' }} uppercase w-full cursor-pointer relative {{ $show ? 'z-20' : '' }}">
         {{ $options[$selected]['text'] ?? 'Select' }}
 
         <div wire:loading.class="hidden" wire:target="select">
@@ -20,7 +20,7 @@
         @foreach (array_filter($options, fn($key) => $key['value'] != $selected) as $index => $option)
             <li>
                 <span wire:click="select({{ $option['value'] }})"
-                    class="text-xs font-semibold inline-block py-1 px-2 rounded uppercase last:mr-0 mr-1 hover:text-teal-600 hover:bg-stone-100 cursor-pointer w-full">
+                    class="text-xs font-semibold inline-block py-1 px-2 rounded uppercase hover:text-teal-600 hover:bg-stone-100 cursor-pointer w-full">
                     {{ $option['text'] }}
                 </span>
 

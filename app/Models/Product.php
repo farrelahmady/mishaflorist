@@ -20,7 +20,7 @@ class Product extends Model
     protected $casts = [
         'quantity' => 'integer',
         'discount' => 'integer',
-        'is_featured' => 'boolean',
+        'featured' => 'boolean',
         'product_category_id' => 'integer',
     ];
 

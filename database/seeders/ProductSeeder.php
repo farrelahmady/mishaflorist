@@ -42,7 +42,7 @@ class ProductSeeder extends Seeder
                         "quantity" => $productFactory->quantity,
                         "discount" => $productFactory->discount,
                         "description" => $productFactory->description,
-                        "is_featured" => $productFactory->is_featured,
+                        "featured" => $productFactory->featured,
                     ]
                 ]);
 
@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
 
                 info("Uploaded new image:" . $filePath);
 
-                $filePath = str_replace(storage_path('app/public'), "storage", $filePath);
+                $filePath = str_replace(storage_path('app/public'), "", $filePath);
 
                 $product->pictures()->create([
                     "path" => $filePath,
