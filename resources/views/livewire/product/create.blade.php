@@ -118,8 +118,8 @@
                                 @endforeach
                                 @if (count($pictures) < 5)
                                     <div
-                                        class="h-full border-2 border-dashed text-gray-200 text-6xl flex items-center justify-center rounded ">
-                                        <label for="pictures">
+                                        class="h-full border-2 border-dashed text-gray-200 text-6xl flex items-center justify-center rounded cursor-pointer">
+                                        <label for="pictures" class="cursor-pointer">
                                             <i class="fa-solid fa-plus"></i>
                                         </label>
                                         <input id="pictures" wire:model="uploadedPictures" class="hidden"

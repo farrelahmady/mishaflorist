@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div id="flash-container" class="fixed z-50 flex flex-col left-4 right-4 top-4">
+    <div id="flash-container" class="fixed z-[9999] flex flex-col left-4 right-4 top-4">
 
     </div>
 

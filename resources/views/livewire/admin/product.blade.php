@@ -1,5 +1,7 @@
 <div>
 
+    @livewire('product.edit', [], key('edit' . now()))
+
     <x-card-container>
         @slot('title')
             Product
@@ -47,7 +49,7 @@
                             <td class="table-data capitalize">{{ $product->discount }}%</td>
                             <td class="table-data capitalize">Rp
                                 {{ number_format($product->discounted_price, 0, ',', '.') }}</td>
-                            <td class="table-data capitalize">{{ $product->quantity }}</td>
+                            <td class="table-data capitalize">{{ $product->stock }}</td>
                             <td class="table-data capitalize">
                                 @php
                                     $style = $product->featured ? 'text-green-600 bg-green-200' : 'text-red-600 bg-red-200';
@@ -82,7 +84,7 @@
                             </td>
                             <td class="table-data ">
                                 <div class="flex  items-center gap-1">
-                                    <span class="badge clickable badge-info">
+                                    <span class="badge clickable badge-info" wire:click="edit('{{ $product->id }}')">
                                         Edit
                                     </span>
                                     <span wire:click="deleteProduct('{{ $product->id }}')"

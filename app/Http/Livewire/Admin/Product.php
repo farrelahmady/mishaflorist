@@ -11,7 +11,7 @@ class Product extends Component
     use WithPagination;
 
     public $search;
-    public $showCreate = true;
+    public $selectedId;
 
     protected $paginationTheme = 'tailwind';
 
@@ -53,5 +53,10 @@ class Product extends Component
         $this->dispatchBrowserEvent('alert', ['type' => 'success', 'message' => "Successfully Delete <strong>'$product->name'</strong>"]);
 
         $this->emit('refreshProduct');
+    }
+
+    function edit($id)
+    {
+        $this->emit('showEdit', $id);
     }
 }
