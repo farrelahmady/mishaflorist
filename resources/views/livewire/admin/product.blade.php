@@ -2,13 +2,24 @@
 
     @livewire('product.edit', [], key('edit' . now()))
 
+    <input type="text" class="hidden">
     <x-card-container>
         @slot('title')
             Product
         @endslot
 
         @slot('additionHeader')
-            @livewire('product.create', [], key('create' . now()))
+            <div class="flex gap-4">
+                <div class="flex gap-1 items-center">
+                    <input type="text" id="search" wire:model.debounce.300ms="search"
+                        class="border-b-2 border-gray-300 text-gray-900 text-sm  focus:ring-teal-600 focus:border-teal-600 px-2 peer"
+                        placeholder="Search product by name">
+                    <label for="search" class="block text-sm ">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                @livewire('product.create', [], key('create' . now()))
+            </div>
         @endslot
 
         <div class="w-full overflow-y-hidden overflow-x-auto">
