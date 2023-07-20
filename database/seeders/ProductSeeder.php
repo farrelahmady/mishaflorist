@@ -20,6 +20,10 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        if (env('APP_ENV') === 'local') {
+            Storage::disk('public')->deleteDirectory('product');
+        }
+
         $allImages = Storage::disk('dummy')->allFiles();
         foreach ($this->categories as $category) {
             $category = ProductCategory::create([
@@ -39,7 +43,7 @@ class ProductSeeder extends Seeder
                     [
                         "name" => $productFactory->name,
                         "price" => $productFactory->price,
-                        "quantity" => $productFactory->quantity,
+                        "stock" => $productFactory->stock,
                         "discount" => $productFactory->discount,
                         "description" => $productFactory->description,
                         "featured" => $productFactory->featured,

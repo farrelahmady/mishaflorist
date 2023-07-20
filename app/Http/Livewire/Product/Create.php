@@ -39,9 +39,18 @@ class Create extends Component
         'description' => 'nullable|min:6|max:255'
     ];
 
+    protected $listeners = [
+        'showCreate' => 'show',
+    ];
+
     public function mount()
     {
         $this->categoryOptions = \App\Models\ProductCategory::all();
+    }
+
+    public function show()
+    {
+        $this->show = true;
     }
 
     public function close()
